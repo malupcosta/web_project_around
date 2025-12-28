@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EUA Afora - É uma página para você adicionar, curtir e remover fotos com facilidade, compartilhando aventuras com fotos incríveis."
+    />
+    <meta name="author" content="Malu Costa" />
+    <title>EUA Afora</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/vector.png"
+          alt="Logo do site escrito around the U.S.A"
+          class="header__vector"
+        />
+        <div class="header__line"></div>
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/avatar.jpg"
+            alt="Foto de Jacques Cousteau - que é um homem mais velho com cabelo branco, usando uma blusa polo e uma touca vermelha"
+            class="profile__image"
+          />
+
+          <div class="profile__info">
+            <div class="profile__text-container">
+              <h1 class="profile__title">Jacques Cousteau</h1>
+              <button
+                class="profile__edit-button"
+                type="button"
+                aria-label="Editar perfil"
+              ></button>
+            </div>
+            <p class="profile__description">Explorador</p>
+          </div>
+
+          <button
+            class="profile__add-button"
+            type="button"
+            aria-label="Adicionar foto"
+          ></button>
+        </section>
+
+        <section class="elements">
+          <ul class="elements__list">
+            <li class="element">
+              <img
+                src="./images/vale-yosemite.jpg"
+                alt="Foto do Vale de Yosemite - Na imagem tem um rio com pinheiros em volta "
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Vale de Yosemite</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+
+            <li class="element">
+              <img
+                src="./images/lago-louise.jpg"
+                alt="Foto do Lago Louise - Na imagem tem um rio com montanhas e neve"
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Lago Louise</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+
+            <li class="element">
+              <img
+                src="./images/montanhas-carecas.jpg"
+                alt="Foto das Montanhas Carecas - Na imagem aparece montanhas e o por do sol"
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Montanhas Carecas</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+
+            <li class="element">
+              <img
+                src="./images/latemar.jpg"
+                alt="Foto do Latemar - Na imagem aparece montanhas a noite com o céu iluminado por muitas estrelas"
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Latemar</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+
+            <li class="element">
+              <img
+                src="./images/parque-vanoise.jpg"
+                alt="Foto do Parque Nacional da Vanoise - Na imagem tem um rio com montanhas em volta"
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Parque Nacional da Vanoise</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+
+            <li class="element">
+              <img
+                src="./images/lago-braies.jpg"
+                alt="Foto do Lago di Braies - Na imagem tem um rio com montanhas, neve e uma casa com um pier, ambos de madeira"
+                class="element__image"
+              />
+              <div class="element__info">
+                <h2 class="element__title">Lago di Braies</h2>
+                <button
+                  class="element__like-button"
+                  type="button"
+                  aria-label="Curtir"
+                ></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2024 Around The U.S.</p>
+      </footer>
+    </div>
+
+    <div class="popup" id="popup-edit-profile">
+      <div class="popup__container">
+        <button
+          class="popup__close-button"
+          type="button"
+          aria-label="Fechar pop-up"
+        ></button>
+        <h2 class="popup__title">Editar perfil</h2>
+
+        <form class="popup__form" name="edit-profile" novalidate>
+          <input
+            type="text"
+            class="popup__input"
+            name="name"
+            placeholder="Nome"
+            id="input-name"
+            required
+            minlength="2"
+            maxlength="40"
+          />
+
+          <input
+            type="text"
+            class="popup__input"
+            name="about"
+            placeholder="Sobre mim"
+            id="input-about"
+            required
+            minlength="2"
+            maxlength="200"
+          />
+
+          <button type="submit" class="popup__button">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
