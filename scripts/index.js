@@ -1,39 +1,29 @@
-const editButton = document.querySelector(".profile__edit-button");
-const popup = document.querySelector("#popup-edit-profile");
-const closeButton = popup.querySelector(".popup__close-button");
-const form = popup.querySelector(".popup__form");
+const initialCards = [
+  { name: "Vale de Yosemite", link: "./images/vale-yosemite.jpg" },
+  { name: "Lago Louise", link: "./images/lago-louise.jpg" },
+  { name: "Montanhas Carecas", link: "./images/montanhas-carecas.jpg" },
+  { name: "Latemar", link: "./images/latemar.jpg" },
+  { name: "Parque Nacional da Vanoise", link: "./images/parque-vanoise.jpg" },
+  { name: "Lago di Braies", link: "./images/lago-braies.jpg" },
+];
 
-const nameInput = popup.querySelector("#input-name");
-const aboutInput = popup.querySelector("#input-about");
+const cardsList = document.querySelector(".elements__list");
+const cardTemplate = document.querySelector("#card-template").content;
 
-const profileName = document.querySelector(".profile__title");
-const profileAbout = document.querySelector(".profile__description");
+function createCard(cardData) {
+  const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
 
-function openPopup() {
-  nameInput.value = profileName.textContent;
-  aboutInput.value = profileAbout.textContent;
-  popup.classList.add("popup_opened");
+  const cardImage = cardElement.querySelector(".element__image");
+  const cardTitle = cardElement.querySelector(".element__title");
+
+  cardTitle.textContent = cardData.name;
+  cardImage.src = cardData.link;
+  cardImage.alt = cardData.name;
+
+  return cardElement;
 }
 
-function closePopup() {
-  popup.classList.remove("popup_opened");
-}
-
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileAbout.textContent = aboutInput.value;
-  closePopup();
-}
-
-editButton.addEventListener("click", openPopup);
-closeButton.addEventListener("click", closePopup);
-form.addEventListener("submit", handleProfileFormSubmit);
-
-const likeButtons = document.querySelectorAll(".element__like-button");
-
-likeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    button.classList.toggle("element__like-button_active");
-  });
+initialCards.forEach((cardData) => {
+  const cardElement = createCard(cardData);
+  cardsList.append(cardElement);
 });

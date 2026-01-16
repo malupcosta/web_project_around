@@ -50,103 +50,7 @@
         </section>
 
         <section class="elements">
-          <ul class="elements__list">
-            <li class="element">
-              <img
-                src="./images/vale-yosemite.jpg"
-                alt="Foto do Vale de Yosemite - Na imagem tem um rio com pinheiros em volta "
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Vale de Yosemite</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-
-            <li class="element">
-              <img
-                src="./images/lago-louise.jpg"
-                alt="Foto do Lago Louise - Na imagem tem um rio com montanhas e neve"
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Lago Louise</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-
-            <li class="element">
-              <img
-                src="./images/montanhas-carecas.jpg"
-                alt="Foto das Montanhas Carecas - Na imagem aparece montanhas e o por do sol"
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Montanhas Carecas</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-
-            <li class="element">
-              <img
-                src="./images/latemar.jpg"
-                alt="Foto do Latemar - Na imagem aparece montanhas a noite com o céu iluminado por muitas estrelas"
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Latemar</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-
-            <li class="element">
-              <img
-                src="./images/parque-vanoise.jpg"
-                alt="Foto do Parque Nacional da Vanoise - Na imagem tem um rio com montanhas em volta"
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Parque Nacional da Vanoise</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-
-            <li class="element">
-              <img
-                src="./images/lago-braies.jpg"
-                alt="Foto do Lago di Braies - Na imagem tem um rio com montanhas, neve e uma casa com um pier, ambos de madeira"
-                class="element__image"
-              />
-              <div class="element__info">
-                <h2 class="element__title">Lago di Braies</h2>
-                <button
-                  class="element__like-button"
-                  type="button"
-                  aria-label="Curtir"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="elements__list"></ul>
         </section>
       </main>
 
@@ -192,6 +96,20 @@
       </div>
     </div>
 
-    <script src="./scripts/index.js"></script>
+    <template id="card-template">
+      <li class="element">
+        <img class="element__image" src="" alt="" />
+        <div class="element__info">
+          <h2 class="element__title"></h2>
+          <button
+            class="element__like-button"
+            type="button"
+            aria-label="Curtir"
+          ></button>
+        </div>
+      </li>
+    </template>
+
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>
