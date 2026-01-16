@@ -1,0 +1,25 @@
+.popup_type_image .popup__image-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 75vw;
+}
+
+.popup_type_image .popup__close-button {
+  top: -40px;
+  right: -40px;
+}
+
+.popup__image {
+  display: block;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+}
+
+.popup__caption {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+}
