@@ -2,7 +2,7 @@
 
 Galeria Around The U.S.
 
-Projeto desenvolvido durante a Sprint 7 do curso da TripleTen.
+Projeto desenvolvido durante as Sprints 7 e 8 do curso da TripleTen.
 
 📌 Descrição do projeto
 
