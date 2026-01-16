@@ -96,6 +96,41 @@
       </div>
     </div>
 
+    <div class="popup" id="popup-add-card">
+      <div class="popup__container">
+        <button
+          class="popup__close-button"
+          type="button"
+          aria-label="Fechar pop-up"
+        ></button>
+        <h2 class="popup__title">Novo local</h2>
+
+        <form class="popup__form" name="add-card" novalidate>
+          <input
+            type="text"
+            class="popup__input"
+            name="title"
+            placeholder="Título"
+            id="input-card-title"
+            required
+            minlength="1"
+            maxlength="30"
+          />
+
+          <input
+            type="url"
+            class="popup__input"
+            name="link"
+            placeholder="Link da imagem"
+            id="input-card-link"
+            required
+          />
+
+          <button type="submit" class="popup__button">Criar</button>
+        </form>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="element">
         <img class="element__image" src="" alt="" />

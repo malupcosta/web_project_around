@@ -27,3 +27,25 @@ initialCards.forEach((cardData) => {
   const cardElement = createCard(cardData);
   cardsList.append(cardElement);
 });
+
+const addButton = document.querySelector(".profile__add-button");
+const addCardPopup = document.querySelector("#popup-add-card");
+const closeAddCardPopupButton = addCardPopup.querySelector(
+  ".popup__close-button"
+);
+
+function openPopup(popup) {
+  popup.classList.add("popup_opened");
+}
+
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
+}
+
+addButton.addEventListener("click", () => {
+  openPopup(addCardPopup);
+});
+
+closeAddCardPopupButton.addEventListener("click", () => {
+  closePopup(addCardPopup);
+});
