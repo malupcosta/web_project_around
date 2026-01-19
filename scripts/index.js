@@ -10,10 +10,20 @@ const initialCards = [
 const cardsList = document.querySelector(".elements__list");
 const cardTemplate = document.querySelector("#card-template").content;
 
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+
+const editButton = document.querySelector(".profile__edit-button");
+const editPopup = document.querySelector("#popup-edit-profile");
+const closeEditPopupButton = editPopup.querySelector(".popup__close-button");
+const editProfileForm = editPopup.querySelector('form[name="edit-profile"]');
+const nameInput = editProfileForm.querySelector("#input-name");
+const aboutInput = editProfileForm.querySelector("#input-about");
+
 const addButton = document.querySelector(".profile__add-button");
 const addCardPopup = document.querySelector("#popup-add-card");
 const closeAddCardPopupButton = addCardPopup.querySelector(
-  ".popup__close-button"
+  ".popup__close-button",
 );
 const addCardForm = addCardPopup.querySelector('form[name="add-card"]');
 const cardTitleInput = addCardForm.querySelector("#input-card-title");
@@ -96,6 +106,23 @@ initialCards.forEach((cardData) => {
   cardsList.append(cardElement);
 });
 
+editButton.addEventListener("click", () => {
+  nameInput.value = profileTitle.textContent;
+  aboutInput.value = profileDescription.textContent;
+  openPopup(editPopup);
+});
+
+closeEditPopupButton.addEventListener("click", () => {
+  closePopup(editPopup);
+});
+
+editProfileForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  profileTitle.textContent = nameInput.value;
+  profileDescription.textContent = aboutInput.value;
+  closePopup(editPopup);
+});
+
 addButton.addEventListener("click", () => {
   openPopup(addCardPopup);
 });
@@ -123,5 +150,6 @@ imagePopupCloseButton.addEventListener("click", () => {
   closePopup(imagePopup);
 });
 
+editPopup.addEventListener("mousedown", handleOverlayClick);
 addCardPopup.addEventListener("mousedown", handleOverlayClick);
 imagePopup.addEventListener("mousedown", handleOverlayClick);
