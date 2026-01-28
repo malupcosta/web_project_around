@@ -153,3 +153,12 @@ imagePopupCloseButton.addEventListener("click", () => {
 editPopup.addEventListener("mousedown", handleOverlayClick);
 addCardPopup.addEventListener("mousedown", handleOverlayClick);
 imagePopup.addEventListener("mousedown", handleOverlayClick);
+
+enableValidation({
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+});
