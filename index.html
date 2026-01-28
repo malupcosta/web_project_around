@@ -59,6 +59,7 @@
       </footer>
     </div>
 
+    <!-- POPUP EDITAR PERFIL -->
     <div class="popup" id="popup-edit-profile">
       <div class="popup__container">
         <button
@@ -79,6 +80,7 @@
             minlength="2"
             maxlength="40"
           />
+          <span class="popup__error" id="input-name-error"></span>
 
           <input
             type="text"
@@ -90,6 +92,7 @@
             minlength="2"
             maxlength="200"
           />
+          <span class="popup__error" id="input-about-error"></span>
 
           <button type="submit" class="popup__button">Salvar</button>
         </form>
@@ -113,9 +116,10 @@
             placeholder="Título"
             id="input-card-title"
             required
-            minlength="1"
+            minlength="2"
             maxlength="30"
           />
+          <span class="popup__error" id="input-card-title-error"></span>
 
           <input
             type="url"
@@ -125,6 +129,7 @@
             id="input-card-link"
             required
           />
+          <span class="popup__error" id="input-card-link-error"></span>
 
           <button type="submit" class="popup__button">Criar</button>
         </form>
